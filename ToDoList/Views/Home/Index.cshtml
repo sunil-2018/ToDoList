@@ -1,0 +1,64 @@
+﻿@model List<ToDoList.Models.Rem_tb>
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Index</title>
+</head>
+
+<body>
+
+    <div>
+        <form action="/Home/Index" method="post">
+            
+            <input type="text" name="Rem_Desc" placeholder="Enter schedule">
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+
+    </div>
+
+    <div>
+       
+        <table class="table" >
+            <thead>
+
+                <tr>
+                    <th scope="col">Sche ID</th>
+                    <th scope="col">Sche Name</th>
+                </tr>
+
+            </thead>
+        
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td scope="row">@item.Rem_id</td>
+
+                        <td scope="row">@item.Rem_Desc</td>
+
+                        <td scope="row"><a href="~/Home/Delete/@item.Rem_id">delete</a></td>
+
+                        <td><a href="~/Home/Edit/@item.Rem_id">Edit</a></td>
+
+                    </tr>
+                }
+ 
+            </tbody>
+           
+        </table>
+
+    </div>
+
+</body>
+
+</html>

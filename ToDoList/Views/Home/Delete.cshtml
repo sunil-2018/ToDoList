@@ -1,0 +1,28 @@
+﻿@model ToDoList.Models.Rem_tb
+{
+}
+        <h1>Delete Schedule</h1>
+
+
+
+        <form action="~/Views/Home/Delete/@Model.Rem_id" method="post">
+            
+            <div>
+                    
+                <div>
+                    <input type="text" value="@Model.Rem_Desc" />
+                </div>
+
+            </div>
+
+
+
+            <button class="btn btn-success" type="submit" >Delete</button>
+            <a class="btn btn-danger" href="/Home/Index"></a>
+        </form>
+ 
+      
+
+    
+
+

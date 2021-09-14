@@ -1,0 +1,33 @@
+﻿@model ToDoList.Models.Rem_tb
+{    
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    <form action="/Home/Edit/@Model.Rem_id" method="post">
+
+        <div>
+
+            <table>
+
+                <tr>
+                    <td><input type="number" name="Rem_id" value="@Model.Rem_id" /></td>
+
+                    <td><input type="text" name="Rem_Desc" value="@Model.Rem_Desc" /></td>
+                </tr>
+
+            </table>
+
+            <button type="submit">Edit</button>
+            <a class="btn btn-danger" href="/Home/Index"></a>
+        </div>
+
+    </form>
+</body>
+</html>
